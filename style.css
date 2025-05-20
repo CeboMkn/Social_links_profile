@@ -29,15 +29,18 @@ body {
 .card {
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     background-color: var(--color-grey-800);
     border-radius: 1rem;
-    width: 350px;
-    height: 600px;
+    width: 380px;
+    height: 630px;
+    gap: 1.5rem;
 }
 
 .img_name {
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -50,13 +53,59 @@ body {
     object-fit: cover;
 }
 
-.img_name h2 {
+.name {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.name h2 {
+    width: 100%;
     color: var(--color-white);
     text-align: center;
 }
 
-.img_name p {
+.name p {
     text-align: center;
     color: var(--color-green);
 }
 
+.text p {
+    color: hsl(0, 3%, 79%);
+}
+
+.links {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.8rem;
+    justify-items: center;
+}
+
+.links a {
+    padding: 14px 20px;
+    border-radius: 0.5rem;
+    width: 85%;
+    color: var(--color-white);
+    text-decoration: none;
+    background-color: var(--color-grey-700);
+    font-size: 14px;
+    font-weight: var(--weight-600);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.links a:hover {
+    background-color: var(--color-green);
+    color: var(--color-grey-700);
+}
+
+@media (max-width: 375px) {
+    .card {
+        max-width: 320px;
+        padding: 1rem;
+    }
+}
